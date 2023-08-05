@@ -50,9 +50,11 @@ function playSound(key){
     }
 }
 function buttonPressed(key){
-    var activeButton=document.querySelector("."+key);
-    activeButton.classList.add("pressed");
-    setTimeout(function(){
-        activeButton.classList.remove("pressed")
-    },100)
+    if(key==="a" ||key==="w" ||key==="s" ||key==="d" ||key==="j" ||key==="k" ||key==="l"){
+        var activeButton=document.querySelector("."+key);
+        activeButton.classList.add("pressed");
+        setTimeout(function(){
+            activeButton.classList.remove("pressed")
+        },100)
+    }
 }
